@@ -16,11 +16,13 @@ Display the result of the operation in a user-friendly message, e.g., The result
 
 # match_case_calculator.py
 
+# match_case_calculator.py
+
 first_number = int(input("Enter the first number: "))
 second_number = int(input("Enter the second number: "))
-operator = input("Choose the operation (+, -, *, /): ")
+operation = input("Choose the operation (+, -, *, /): ")
 
-match operator:
+match operation:
     case "+":
         result = first_number + second_number
         print(f"The result is {result}")
@@ -38,5 +40,6 @@ match operator:
             print(f"The result is {result}")
     case _:
         print("Invalid operator selected.")
+
 
         
