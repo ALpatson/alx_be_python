@@ -17,7 +17,10 @@ Example Interaction:
 
 If the user inputs 5, the output should be:"""
 
-number =  int(input("Enter a number to see its multiplication table: "))
-for i in range(1,11):
-    table = number * i
-    print(f'{number} x {i} = {table}')
+    
+# multiplication_table.py
+
+number = int(input("Enter a number to see its multiplication table: "))
+
+for i in range(1, 11):
+    print(f"{number} * {i} = {number * i}")
