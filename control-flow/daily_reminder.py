@@ -16,21 +16,24 @@ A message should be ‘that requires immediate attention today!’"""
 
 # task_reminder.py
 
-task = input("Enter your task description: ")
-priority = input("What's the priority of the task (high, medium, low): ").lower()
-time_bound = input("Is your task time-bound (yes or no): ").lower()
+# daily_reminder.py
+
+task = input("Enter your task: ")
+priority = input("Priority (high/medium/low): ").lower()
+time_bound = input("Is it time-bound? (yes/no): ").lower()
 
 match priority:
     case "high":
-        message = f"Note: '{task}' is a high priority task. Consider completing it as soon as possible."
+        message = f"'{task}' is a high priority task. Consider completing it as soon as possible."
     case "medium":
-        message = f"Note: '{task}' is a medium priority task. Try to schedule time for it soon."
+        message = f"'{task}' is a medium priority task. Try to schedule time for it soon."
     case "low":
-        message = f"Note: '{task}' is a low priority task. You can plan it for later."
+        message = f"'{task}' is a low priority task. You can plan it for later."
     case _:
-        message = f"Note: '{task}' has an unknown priority. Please check again."
+        message = f"'{task}' has an unknown priority. Please check again."
 
 if time_bound == "yes":
     message += " This task requires immediate attention today!"
 
 print(message)
+
