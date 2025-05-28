@@ -14,23 +14,22 @@ Output the Result:
 
 Display the result of the operation in a user-friendly message, e.g., The result is [result]."""
 
-first_number = float(input("Enter the first number: "))
-second_number = float(input("Enter the second number: "))
-operator = input("Choose the operation (+, -, *, / ): ")
+# match_case_calculator.py
+
+first_number = int(input("Enter the first number: "))
+second_number = int(input("Enter the second number: "))
+operator = input("Choose the operation (+, -, *, /): ")
 
 match operator:
-    case "+" :
+    case "+":
         result = first_number + second_number
         print(f"The result is {result}")
-        
-    case "*" :
-        result = first_number * second_number
-        print(f"The result is {result}")
-        
-    case "-" :
+    case "-":
         result = first_number - second_number
         print(f"The result is {result}")
-        
+    case "*":
+        result = first_number * second_number
+        print(f"The result is {result}")
     case "/":
         if second_number == 0:
             print("Error: Cannot divide by zero.")
@@ -39,4 +38,5 @@ match operator:
             print(f"The result is {result}")
     case _:
         print("Invalid operator selected.")
+
         
